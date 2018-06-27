@@ -16,6 +16,12 @@ export class ViewTaskComponent implements OnInit {
    dropDownList: TaskModel[] ;
    endTask: TaskModel;
    initialized: boolean;
+   taskSearch: string;
+   parentTaskSearch: string;
+   prioritySearch: string;
+   prioritySearch1: string;
+   startDateSearch: string;
+   endDateSearch: string;
   ngOnInit() {
     this.Initialize();
   }
@@ -27,7 +33,6 @@ export class ViewTaskComponent implements OnInit {
       },
       err => {
         this.Initialize();
-        console.log('Error occured');
       }
     );
   }

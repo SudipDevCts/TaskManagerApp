@@ -26,8 +26,7 @@ export class UpdateTaskComponent implements OnInit {
       restItems => {
         this.taskModel = restItems;
         if (this.taskModel) {
-          console.log(this.taskModel);
-          this.updateTaskForm = new FormGroup ({
+            this.updateTaskForm = new FormGroup ({
             Task: new FormControl(this.taskModel.Task, Validators.required),
             Priority: new FormControl(this.taskModel.Priority, Validators.min(1)),
             ParentTask: new FormControl(this.taskModel.ParentTask),
